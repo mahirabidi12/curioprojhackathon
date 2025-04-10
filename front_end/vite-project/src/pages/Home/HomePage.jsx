@@ -44,6 +44,7 @@ const HeroSection = styled.div`
   gap: 2rem;
   max-width: 800px;
   margin: 0 auto;
+  cursor: default;
 `;
 
 const Title = styled.h1`
@@ -87,7 +88,7 @@ const HomePage = () => {
         muted 
         loop 
         playsInline
-        poster="/assets/videos/poster.jpg" // Optional: Add a poster image while video loads
+        poster="/assets/videos/poster.jpg" 
       >
         <source src="/assets/videos/background.mp4" type="video/mp4" />
         Your browser does not support the video tag.

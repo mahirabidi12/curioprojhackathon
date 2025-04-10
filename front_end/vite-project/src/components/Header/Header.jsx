@@ -43,7 +43,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <Nav>
-        <Logo>EduAI</Logo>
+        <Logo>Curio</Logo>
         <NavLinks>
           <a href="#features">Features</a>
           <a href="#about">About</a>

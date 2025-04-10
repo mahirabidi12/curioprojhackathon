@@ -42,7 +42,7 @@ const StyledAuroraButton = styled.button`
   }
 
   &:hover::before {
-    opacity: 0.7;
+    opacity: 0.2;
   }
 
   @keyframes aurora-bg {
