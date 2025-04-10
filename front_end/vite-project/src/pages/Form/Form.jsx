@@ -265,7 +265,7 @@ const FormPage = () => {
       }
 
       const data = await response.json();
-      console.log('Success:', data);
+      // console.log(data);
       
       // Navigate to EditPrompt with the response data
       navigate('/edit-prompt', { state: { response: data } });

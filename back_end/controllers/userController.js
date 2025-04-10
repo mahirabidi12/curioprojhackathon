@@ -13,8 +13,7 @@ export async function generateFirstTranscript(req, res) {
       ageGroup,
     });
     const response = await getGeminiTranscript(prompt);
-    res.send(response)
-    // console.log(response)
+    res.json(response)
   } catch (error) {
     console.log(`Failed in generateFirstTranscript`, error);
   }

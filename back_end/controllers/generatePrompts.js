@@ -14,7 +14,7 @@ Please behave as if you're a teacher directly addressing your student. Keep the 
 Here are the key parameters:
 - **Topic**: ${topic}
 - **Objective**: ${objective}
-- **Duration**: ${duration} minutes
+- **Duration**: ${duration} seconds
 - **Target Audience**: ${targetAudience}
 - **Age Group**: ${ageGroup}
 
