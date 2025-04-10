@@ -6,8 +6,7 @@ import {
 
 const router = express.Router();
 
-router.get("/createFirstTranscript", generateFirstTranscript);
+router.post("/createFirstTranscript", generateFirstTranscript);
 router.get("/generateResponse", generateFinalTranscript);
 
 export default router;
- 

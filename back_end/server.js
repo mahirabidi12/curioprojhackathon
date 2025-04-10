@@ -3,15 +3,16 @@ import dotenv from "dotenv";
 import express from "express";
 import userRoutes from "./routes/userRoutes.js";
 import connectDb from "./config/db.js";
+import cors from 'cors'
+
+app.use(cors());
 
 dotenv.config();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/user", userRoutes , ()=>{
-    console.log(`received`)
-});
+app.use("/user", userRoutes);
 
 
 app.listen(3000, () => {

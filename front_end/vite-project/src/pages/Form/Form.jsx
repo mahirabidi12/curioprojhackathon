@@ -258,16 +258,20 @@ const FormPage = () => {
         ageGroup: formData.ageGroup
       }).toString();
 
-      const response = await fetch(`YOUR_API_ENDPOINT_HERE?${queryParams}`, {
-        method: 'GET',
+      const response = await fetch(`http://localhost:3000/user/createFirstTranscript`, {
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           // Add any additional headers if needed
-        }
+        },
+        body : JSON.stringify(formData)
       });
 
       if (!response.ok) {
         throw new Error('Failed to submit form');
+      }
+      else{
+        <editPrompt response={response}/>
       }
 
       const data = await response.json();

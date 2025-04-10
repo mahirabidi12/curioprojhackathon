@@ -12,6 +12,7 @@
   "description": "",
   "dependencies": {
     "@google/genai": "^0.8.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^5.1.0",
     "mongoose": "^8.13.2"

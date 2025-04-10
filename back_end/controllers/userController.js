@@ -14,6 +14,7 @@ export async function generateFirstTranscript(req, res) {
     });
     const response = await getGeminiTranscript(prompt);
     res.send(response)
+    // console.log(response)
   } catch (error) {
     console.log(`Failed in generateFirstTranscript`, error);
   }
