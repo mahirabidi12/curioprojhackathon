@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 const FormContainer = styled.div`
   min-height: 100vh;
@@ -235,6 +236,7 @@ const FormPage = () => {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -250,35 +252,23 @@ const FormPage = () => {
     setError(null);
 
     try {
-      const queryParams = new URLSearchParams({
-        topic: formData.topic,
-        objective: formData.objective,
-        duration: formData.duration,
-        targetAudience: formData.targetAudience,
-        ageGroup: formData.ageGroup
-      }).toString();
-
-      const response = await fetch(`http://localhost:3000/user/createFirstTranscript`, {
+      const response = await fetch('http://localhost:3000/user/createFirstTranscript', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          // Add any additional headers if needed
         },
-        body : JSON.stringify(formData)
+        body: JSON.stringify(formData)
       });
 
       if (!response.ok) {
         throw new Error('Failed to submit form');
       }
-      else{
-        <editPrompt response={response}/>
-      }
 
       const data = await response.json();
       console.log('Success:', data);
       
-      // Handle successful submission
-      // You can add navigation or success message here
+      // Navigate to EditPrompt with the response data
+      navigate('/edit-prompt', { state: { response: data } });
 
     } catch (err) {
       setError(err.message);
