@@ -180,13 +180,13 @@ const defaultPersonas = [
     id: 1,
     name: "Harsh Sir",
     description: "Professional and engaging teaching style",
-    imageUrl: "/public/assets/images/persona1.jpg"
+    imageUrl: "/assets/images/persona1.jpg"
   },
   {
     id: 2,
     name: "NV Sir",
     description: "Friendly and casual teaching approach",
-    imageUrl: "/public/assets/images/persona2.jpg" // Replace with actual URL
+    imageUrl: "/assets/images/persona2.jpg" // Replace with actual URL
   }
 ];
 
@@ -217,7 +217,7 @@ const EditPrompt = () => {
 
     setIsGenerating(true);
     try {
-      const response = await fetch('http://localhost:3000/user/generateVideo', {
+      const response = await fetch('http://localhost:3000/user/generateResponse', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -232,8 +232,9 @@ const EditPrompt = () => {
         throw new Error('Generation failed');
       }
 
-    //   const data = await response.json();
-    //   console.log('Generated:', data);
+      const data = await response.json();
+      console.log(data)
+
       
     } catch (error) {
       console.error('Error:', error);

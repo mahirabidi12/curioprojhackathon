@@ -5,7 +5,8 @@ import Header from './components/Header/Header';
 import HomePage from './pages/Home/HomePage';
 import FormPage from './pages/Form/Form';
 import GlobalStyles from './styles/GlobalStyles';
-import EditPrompt from './pages/EditPrompt/EditPrompt';
+import EditPrompt from './pages/EditPrompt/EditPrompt.jsx';
+
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/create" element={<FormPage />} />
-        <Route path="/edit-prompt" element={<EditPrompt />} />
+        <Route path="/edit-prompt" element={<EditPrompt/>} />
       </Routes>
     </Router>
   );

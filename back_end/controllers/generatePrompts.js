@@ -34,7 +34,7 @@ export function finalPrompt(confirmedPrompt) {
   let finalPrompt = `
 You are part of an AI-powered educational video generation system.
 
-You will be given a final transcript written for an educational video. Your task is to break this transcript into at least **six and maximum 10 , meaningful and logically segmented parts**, each representing a distinct point or visual scene from the content.
+You will be given a final transcript written for an educational video. Your task is to break this transcript into at least **6 , meaningful and logically segmented parts**, each representing a distinct point or visual scene from the content.
 
 For each part, return an object containing:
 1. **text** – a clear, concise portion of the transcript that can stand as an individual scene or concept.
@@ -44,7 +44,7 @@ The final output should be a **JSON array of objects**, structured like this:
 [
   {
     "text": "This is a short part of the transcript.",
-    "imagePrompt": "A classroom scene with a teacher explaining the water cycle using a colorful diagram on a whiteboard."
+    "imagePrompt": "A classroom scene with a teacher explaining the water cycle using a colorful diagram on a whiteboard." 
   },
   {
     "text": "Next part of the transcript...",

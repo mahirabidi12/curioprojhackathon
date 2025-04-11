@@ -15,5 +15,5 @@ async function getGeminiTranscript(prompt) {
     console.log("Getting Data from Gemini failed", error);
   }
 }
-
+ 
 export default getGeminiTranscript;
